@@ -1,0 +1,576 @@
+body{
+  font: 15px/1.5 Arial, Helvetica,sans-serif;
+  padding:0;
+  margin:0;
+  background-color:white;
+}
+
+/* Global */
+.container{
+  width:80%;
+  margin:auto;
+  overflow:hidden;
+}
+
+h1{
+	font-family: 'Oxygen', sans-serif;
+    font-weight: lighter;
+	font-size:24px;
+	color:#004d00;
+}
+
+h2{
+	font-family: 'Oxygen', sans-serif;
+    font-weight: lighter;
+	font-size:20px;
+	color:#004d00;
+}
+
+h3{
+	font-family: 'Oxygen', sans-serif;
+    font-weight: lighter;
+	font-size:18px;
+	color:#004d00;
+}
+
+h4{
+	font-family: 'Oxygen', sans-serif;
+    font-weight: lighter;
+	font-size:16px;
+	color:#004d00;
+}
+
+p{
+	font-family: 'Oxygen', sans-serif;
+    font-weight: lighter;
+	font-size:14px;
+	color:#595959;
+}
+
+ul{
+  margin:0;
+  padding:0;
+}
+
+.button_1{
+  height:38px;
+  background:#004d00;
+  border:0;
+  padding-left: 20px;
+  padding-right:20px;
+  color:#ffffff;
+}
+
+.dark{
+  padding:15px;
+  background:#737373;
+  color:#ffffff;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+/* Header **/
+header{
+  background:white;
+  color:silver;
+  padding-top:10px;
+  min-height:70px;
+  border-bottom:#eaeaeb 1px solid;
+}
+
+header a{
+  color:#595959;
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size:14px;
+}
+
+header li{
+  float:left;
+  display:inline;
+  padding: 0 15px 0 20px;
+}
+
+header li:last-child{ padding-right:0;}
+
+header #branding{
+  float:left;
+}
+
+header #branding img{
+  height: 80px;
+}
+
+
+header nav{
+  float:right;
+  margin-top:30px;
+}
+
+header .highlight, header .current a{
+  color:#004d00;
+  font-weight:bold;
+}
+
+header a:hover{
+  color:#00b300;
+  transition: 0.5s;
+}
+
+/*****************page heading**********************/
+
+.heading{
+	width:80%;
+  margin:auto;
+  overflow:hidden;
+  border-bottom: #eaeaeb 1px solid;
+  
+}
+
+.heading h1{
+	color:#004d00;
+	position: relative;
+	float:left;
+	
+}
+
+.heading a{
+	position:relative;
+	float:right;
+	text-decoration:none;
+	margin-top:13px;
+}
+
+/*********************slideshow**************************/
+.slide_show{
+	margin: 0 auto;
+	margin-top: 0;
+	position: relative;
+	width: 100%;
+	height:0;
+	padding-bottom: 370px;
+	background: #4c4c4c;
+	/*animation: 20s slider infinite;*/
+	
+}
+
+.slideimg{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	
+}
+
+.slideimg img{
+	width: 100%;
+	height: 100%;
+}
+
+#i1, #i2, #i3 {
+	display: none;
+}
+
+.pre, .nxt{
+	width: 8%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	background: rgba(88,88,88,.4);
+	z-index:99;
+	cursor: pointer;
+}
+
+.pre{
+	left: 0;
+}
+
+.nxt{
+	right: 0;
+}
+
+.nav{
+	width:100%;
+	height: 11px;
+	bottom: 10%;
+	position: absolute;
+	text-align: center;
+	z-index: 99;
+}
+
+.dots{
+	top: -5px;
+	width: 18px;
+	height: 18px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 50%;
+	display: inline-block;
+	background: rgba(0,0,0,.4);
+}
+
+.slideimg{
+	z-index: 1;
+}
+
+#i1:checked ~ #one,
+#i2:checked ~ #two,
+#i3:checked ~ #three{
+	z-index: 9;
+}
+
+#i1:checked ~ .nav #dot1,
+#i2:checked ~ .nav #dot2,
+#i3:checked ~ .nav #dot3{
+	background: silver;
+}
+
+#i11, #i21, #i31 {
+	display: none;
+}
+
+#i11:checked ~ #one,
+#i21:checked ~ #two,
+#i31:checked ~ #three{
+	z-index: 9;
+}
+
+#i11:checked ~ .nav #dot11,
+#i21:checked ~ .nav #dot21,
+#i31:checked ~ .nav #dot31{
+	background: silver;
+}
+
+#i12, #i22{
+	display: none;
+}
+
+#i12:checked ~ #one,
+#i22:checked ~ #two{
+	z-index: 9;
+}
+
+#i12:checked ~ .nav #dot11,
+#i22:checked ~ .nav #dot21{
+	background: silver;
+}
+
+#i13, #i23, #i33 {
+	display: none;
+}
+
+#i13:checked ~ #one,
+#i23:checked ~ #two,
+#i33:checked ~ #three{
+	z-index: 9;
+}
+
+#i13:checked ~ .nav #dot13,
+#i23:checked ~ .nav #dot23,
+#i33:checked ~ .nav #dot33{
+	background: silver;
+}
+
+#i14, #i24{
+	display: none;
+}
+
+#i14:checked ~ #one,
+#i24:checked ~ #two{
+	z-index: 9;
+}
+
+#i14:checked ~ .nav #dot14,
+#i24:checked ~ .nav #dot24{
+	background: silver;
+}
+
+#i15, #i25, #i35 {
+	display: none;
+}
+
+#i15:checked ~ #one,
+#i25:checked ~ #two,
+#i35:checked ~ #three{
+	z-index: 9;
+}
+
+#i15:checked ~ .nav #dot15,
+#i25:checked ~ .nav #dot25,
+#i35:checked ~ .nav #dot35{
+	background: silver;
+}
+
+#i16, #i26{
+	display: none;
+}
+
+#i16:checked ~ #one,
+#i26:checked ~ #two{
+	z-index: 9;
+}
+
+#i16:checked ~ .nav #dot16,
+#i26:checked ~ .nav #dot26{
+	background: silver;
+}
+/****************************What we do/heritage********************************/
+.brief{
+	position: relative;
+	width: 80%;
+	min-height: 200px;
+	margin:auto;
+	background: ;
+	overflow:hidden;
+	
+}
+
+.inbrief h1{
+	text-align:center;
+	
+}
+
+.inbrief h2{
+	text-align:left;
+	
+}
+
+.inbrief p{
+	text-align:left;
+}
+
+/****************************Current Activities*********************************/
+
+#curact{
+	position: relative;
+	height:220px;
+	width:100%;
+}
+
+#incuract h1{
+	text-align:center;
+}
+
+#incuract th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #004d00;
+  color: white;
+  }
+
+#incuract table{
+	position: relative;
+	width: 80%;
+	margin:auto;
+	border-collapse: collapse;
+}
+
+#incuract th, #incuract td{
+  border: 1px solid #eaeaeb;
+  padding: 8px;
+}
+
+#incuract tr:nth-child(even){background-color: #f2f2f2;}
+
+#incuract tr:hover {background-color: #ddd;}
+
+#incuract table tr{
+	line-height: 20px;
+}
+
+#incuract table td{
+	height: 20px;
+}
+
+/********************************Classifications*************************/
+
+.classy{
+	width:49%;
+	min-height: 200px;
+	border: #eaeaeb 1px solid;
+	float:left;
+}
+
+.classy h3{
+	text-align:center;
+}
+
+.classy li{
+	margin:auto;
+	position:relative;
+	width:90%;
+}
+
+/**********************National Monuments***********************/
+.clasy{
+	width:49%;
+	min-height: 200px;
+	
+	float:left;
+}
+
+.clasy h3{
+	text-align:center;
+}
+
+.clasy li{
+	margin:auto;
+	position:relative;
+	width:90%;
+}
+
+/************************National Monuments Table***********************/
+
+#nmot table{
+	position: relative;
+	width: 80%;
+	margin:auto;
+	border-collapse: collapse;
+	
+}
+
+#nmot td{
+  border: 1px solid #eaeaeb;
+  padding: 8px;
+}
+
+#nmot tr:nth-child(even){background-color: #f2f2f2;}
+
+#nmot table td{
+	height: 100px;
+}
+
+#nmot tr{
+	width: 50%;
+}
+
+/**************************** Showcase *****************************/
+#showcase{
+  min-height:400px;
+  background:url('../img/showcase.jpg') no-repeat 0 -400px;
+  text-align:center;
+  color:#ffffff;
+  top: 20px;
+  
+}
+
+#showcase h1{
+  margin-top:100px;
+  font-size:55px;
+  margin-bottom:10px;
+}
+
+#showcase p{
+  font-size:20px;
+}
+
+/*********************** Newsletter ***************************/
+#newsletter{
+  padding:15px;
+  color:#ffffff;
+  background:#737373;
+}
+
+#newsletter h1{
+  float:left;
+}
+
+#newsletter form {
+  float:right;
+  margin-top:15px;
+}
+
+#newsletter input[type="email"]{
+  padding:4px;
+  height:25px;
+  width:250px;
+}
+
+/* Boxes */
+#boxes{
+  margin-top:20px;
+}
+
+#boxes .box{
+  float:left;
+  text-align: center;
+  width:30%;
+  padding:10px;
+}
+
+#boxes .box img{
+  width:90px;
+}
+
+/******************************* Sidebar *******************************/
+aside#sidebar{
+  float:right;
+  width:30%;
+  margin-top:10px;
+}
+
+aside#sidebar .quote input, aside#sidebar .quote textarea{
+  width:90%;
+  padding:5px;
+}
+
+/************************* Main-col ************************/
+article#main-col{
+  float:left;
+  width:65%;
+}
+
+/* Services */
+ul#services li{
+  list-style: none;
+  padding:20px;
+  border: #cccccc solid 1px;
+  margin-bottom:5px;
+  background:#e6e6e6;
+}
+
+footer{
+  padding:20px;
+  margin-top:20px;
+  color:#ffffff;
+  background-color:#004d00;
+  text-align: center;
+}
+
+/* Media Queries */
+@media(max-width: 768px){
+  header #branding,
+  header nav,
+  header nav li,
+  #newsletter h1,
+  #newsletter form,
+  #boxes .box,
+  article#main-col,
+  aside#sidebar{
+    float:none;
+    text-align:center;
+    width:100%;
+  }
+
+  header{
+    padding-bottom:20px;
+  }
+  
+  #showcase h1{
+    margin-top:40px;
+  }
+
+  #newsletter button, .quote button{
+    display:block;
+    width:100%;
+  }
+
+  #newsletter form input[type="email"], .quote input, .quote textarea{
+    width:100%;
+    margin-bottom:5px;
+  }
+}
+
+.newsdetails{
+	line-height:50px;
+}
